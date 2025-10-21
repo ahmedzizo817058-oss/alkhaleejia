@@ -1,0 +1,43 @@
+:root{
+    --main:#0b6b6b;
+    --accent:#ffd166;
+    --bg:#7b1fa2; /* خلفية بنفسجية */
+    --card:#a0439849;
+    --muted:#666;
+}
+*{box-sizing:border-box}
+body{
+    font-family:Tahoma,Arial,sans-serif;
+    background:linear-gradient(180deg,#7b1fa2,#9c27b0);
+    margin:0;padding:24px;
+    display:flex;align-items:center;justify-content:center;min-height:100vh;
+}
+.wrap{width:100%;max-width:920px;display:grid;grid-template-columns:420px 1fr;gap:24px;align-items:center}
+.card{background:var(--card);border-radius:12px;box-shadow:0 10px 30px rgba(10,10,10,0.08);padding:28px}
+.brand{display:flex;gap:12px;align-items:center;margin-bottom:8px}
+.logo{width:64px;height:64px;border-radius:10px;background:linear-gradient(135deg,var(--main),#065a5a);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:22px}
+h1{margin:0;font-size:20px}
+p.lead{margin:6px 0 18px;color:var(--muted);font-size:14px}
+.tabs{display:flex;gap:8px;margin-bottom:12px}
+.tab{flex:1;padding:10px;border-radius:8px;text-align:center;cursor:pointer;font-weight:600;border:1px solid transparent}
+.tab.active{background:linear-gradient(90deg,rgba(11,107,107,0.06),rgba(11,107,107,0.02));border-color:rgba(11,107,107,0.12);color:var(--main)}
+label{display:block;font-size:13px;color:#333;margin-top:10px}
+input[type="text"],input[type="email"],input[type="password"]{width:100%;padding:10px;border:1px solid #e8e8e8;border-radius:8px;margin-top:6px;font-size:14px;background:#fafafa}
+.row{display:flex;gap:8px}
+.actions{display:flex;gap:8px;align-items:center;margin-top:14px}
+button{background:var(--main);color:#fff;border:none;padding:10px 14px;border-radius:8px;cursor:pointer;font-weight:600}
+button.secondary{background:#fff;color:var(--main);border:1px solid #e6e6e6}
+.msg{margin-top:12px;padding:10px;border-radius:8px;font-size:13px;white-space:pre-line}
+.msg.success{background:#e6fffa;color:#065a5a;border:1px solid #bff0e7}
+.msg.error{background:#fff1f0;color:#8a1e1e;border:1px solid #ffd6d6}
+footer{font-size:12px;color:#777;margin-top:12px;text-align:center}
+.small{font-size:12px;color:var(--muted);margin-top:8px}
+/* right panel */
+.hero{padding:28px;border-radius:12px;display:flex;flex-direction:column;gap:12px;align-items:flex-start;justify-content:center;background:transparent;min-height:320px}
+.hero h2{margin:0;font-size:22px;color:#fff}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%}
+.feat{background:rgba(255,255,255,0.06);padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);font-size:13px;color:#fff}
+.linklike{background:none;border:none;color:var(--main);cursor:pointer;padding:0;font-weight:600}
+/* إخفاء النص الموجود في اللوحة الجانبية (الخلفية) */
+.hero .lead { display: none; }
+@media(max-width:880px){.wrap{grid-template-columns:1fr;padding:10px}.hero{order:-1}}

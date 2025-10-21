@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>الخليجية - أعلاف الأسماك</title>
+
+    <!-- ربط ملفات التنسيق والجافاسكريبت -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="card" role="main">
+            <div class="brand">
+                <div class="logo">AL</div>
+                <div>
+                    <h1>AL-KHALEEJIAH</h1>
+                </div>
+            </div>
+
+            <div class="tabs" role="tablist" aria-label="خيارات الحساب">
+                <div class="tab active" id="tab-register" role="tab">تسجيل</div>
+                <div class="tab" id="tab-login" role="tab">دخول</div>
+            </div>
+
+            <!-- نموذج التسجيل -->
+            <form id="registerForm" autocomplete="on" novalidate>
+                <label for="name">الاسم الكامل</label>
+                <input id="name" name="name" type="text" placeholder="ادخل اسمك" required />
+
+                <label for="email">البريد الإلكتروني</label>
+                <input id="email" name="email" type="email" placeholder="example@domain.com" required />
+
+                <label for="password">كلمة المرور</label>
+                <input id="password" name="password" type="password" placeholder="6 أحرف على الأقل" minlength="6" required />
+
+                <label for="confirm">تأكيد كلمة المرور</label>
+                <input id="confirm" name="confirm" type="password" placeholder="أعد كتابة كلمة المرور" required />
+
+                <div class="small">باستخدام التسجيل أنت توافق على شروطنا وسياسة الخصوصية.</div>
+
+                <div class="actions">
+                    <button type="submit">تسجيل</button>
+                    <button type="button" class="secondary" id="showUsers">عرض المستخدمين (اختباري)</button>
+                </div>
+
+                <div id="message" aria-live="polite"></div>
+            </form>
+
+            <!-- نموذج الدخول -->
+            <form id="loginForm" style="display:none" autocomplete="on" novalidate>
+                <label for="loginEmail">البريد الإلكتروني</label>
+                <input id="loginEmail" name="loginEmail" type="email" placeholder="example@domain.com" required />
+
+                <label for="loginPassword">كلمة المرور</label>
+                <input id="loginPassword" name="loginPassword" type="password" placeholder="كلمة المرور" required />
+
+                <div class="small" style="display:flex;justify-content:space-between;align-items:center">
+                    <span>تذكّرني</span>
+                    <button type="button" class="linklike" id="forgotBtn">نسيت كلمة المرور؟</button>
+                </div>
+
+                <div class="actions">
+                    <button type="submit">دخول</button>
+                    <button type="button" class="secondary" id="toRegister">إنشاء حساب</button>
+                </div>
+
+                <div id="loginMessage" aria-live="polite"></div>
+            </form>
+
+            <footer>تم الإنشاء بواسطة الخليجية — مثال محلي. استخدم خادماً وحماية في الإنتاج.</footer>
+        </div>
+
+        <aside class="hero card" aria-hidden="false">
+            <h2>منتجاتنا لأفضل نمو</h2>
+            <div class="features" aria-hidden="true">
+                <div class="feat">تركيبات متقدمة</div>
+                <div class="feat">توصيل سريع</div>
+                <div class="feat">دعم فني</div>
+                <div class="feat">تحليل جودة</div>
+            </div>
+            <div style="margin-top:12px;width:100%;display:flex;gap:8px">
+                <button class="secondary" id="contactBtn">اتصل بنا</button>
+                <button id="catalogBtn">عرض الكتالوج</button>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>
